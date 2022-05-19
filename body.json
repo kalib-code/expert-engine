@@ -1,0 +1,15 @@
+{
+  "event": "items.create",
+  "accountability": {
+    "user": "b9d7cfda-17fc-4897-8dca-86552555d1fe",
+    "role": "abbd335e-c728-4990-9789-bc28881363a8"
+  },
+  "payload": {
+    "Template": "arewrsresrsersr",
+    "groups": "08e82cda-64c3-48d5-9d7c-eae3dc69f2a2",
+    "Scheduled": "2022-05-18T12:00:00"
+  },
+  "key": "3f307235-6530-4b13-9223-e38d5d3f86e5",
+  "collection": "SMS_Campaign"
+}
+
