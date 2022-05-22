@@ -351,6 +351,19 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@types/cron@^1.7.3":
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/@types/cron/-/cron-1.7.3.tgz#993db7d54646f61128c851607b64ba4495deae93"
+  integrity sha512-iPmUXyIJG1Js+ldPYhOQcYU3kCAQ2FWrSkm1FJPoii2eYSn6wEW6onPukNTT0bfiflexNSRPl6KWmAIqS+36YA==
+  dependencies:
+    "@types/node" "*"
+    moment ">=2.14.0"
+
+"@types/node@*":
+  version "17.0.35"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.35.tgz#635b7586086d51fb40de0a2ec9d1014a5283ba4a"
+  integrity sha512-vu1SrqBjbbZ3J6vwY17jBs8Sr/BKA+/a/WtjRG+whKg1iuLFOosq872EXS0eXWILdO36DHQQeku/ZcL6hz2fpg==
+
 "@types/prop-types@*":
   version "15.7.5"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
@@ -778,6 +791,13 @@ cookie@^0.5.0:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
+cron@^1.8.2:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/cron/-/cron-1.8.3.tgz#2a61d7b15848716885834ec56ac072f4b9744ebd"
+  integrity sha512-JYR/QZFklJCIPndBLfd/2nU1nSlCMrUdtQ2mGLXSVM/qqqEK7DOrFR0gsEiyeqs0PdWrs0ve1ggH4V7XksDwXg==
+  dependencies:
+    luxon "^1.23.x"
+
 cross-spawn@^7.0.0:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
@@ -945,6 +965,22 @@ fastify-cli@^3.1.0:
     semver "^7.3.5"
     split2 "^4.1.0"
     yargs-parser "^20.0.0"
+
+fastify-cron@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/fastify-cron/-/fastify-cron-1.3.0.tgz#acdca57dccf6e655677cf1c421a2c0d2ce20f2f4"
+  integrity sha512-oSoiJ60IetsZAoH5/Q27I75iHPSkyEVsmR9PG8+drQNPfPcs3yQLErCUJq4brZAlVJOG1iFxKhB/ftnY3CMIQA==
+  dependencies:
+    "@types/cron" "^1.7.3"
+    cron "^1.8.2"
+    fastify-plugin "^3.0.0"
+
+fastify-healthcheck@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/fastify-healthcheck/-/fastify-healthcheck-3.1.0.tgz#ea104bbd28a1250a1be8c7466331f17927d20f15"
+  integrity sha512-G8G+RHYQh4JP3qv/OaFlGgFvZfExL3+khdoRfTwaRCsipprk4qXrsoI25O11k1bIyihZgeyG7LIbt0PdHjJUMw==
+  dependencies:
+    under-pressure "^5.6.0"
 
 fastify-plugin@^3.0.0:
   version "3.0.1"
@@ -1475,6 +1511,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+luxon@^1.23.x:
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.28.0.tgz#e7f96daad3938c06a62de0fb027115d251251fbf"
+  integrity sha512-TfTiyvZhwBYM/7QdAVDh+7dBTBA29v4ik0Ce9zda3Mnf8on1S5KJI8P2jKFZ8+5C0jhmr0KwJEO/Wdpm0VeWJQ==
+
 make-dir@^3.0.0, make-dir@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"
@@ -1539,6 +1580,11 @@ mkdirp@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+
+moment@>=2.14.0:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.3.tgz#edd47411c322413999f7a5940d526de183c031f3"
+  integrity sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw==
 
 ms@2.1.2:
   version "2.1.2"
@@ -2288,6 +2334,14 @@ typedarray-to-buffer@^3.1.5:
   integrity sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
   dependencies:
     is-typedarray "^1.0.0"
+
+under-pressure@^5.6.0:
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/under-pressure/-/under-pressure-5.8.1.tgz#911310901badb0d53e8d6b39318c4e0b71db01de"
+  integrity sha512-5c1e0HoNmF2J3NQS4j7j5M5cu5GLR21FqvmOI/V6R+rhwS+HH0ocEFwCYC0CeKbLL/b1NyvMCQzlx15O9CoaEQ==
+  dependencies:
+    "@fastify/error" "^2.0.0"
+    fastify-plugin "^3.0.0"
 
 unicode-length@^2.0.2:
   version "2.0.2"

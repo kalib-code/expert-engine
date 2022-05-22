@@ -3,8 +3,11 @@
 const path = require('path')
 const AutoLoad = require('@fastify/autoload')
 
+
 module.exports = async function (fastify, opts) {
   // Place here your custom code!
+
+  fastify.register(require('fastify-healthcheck')),{ healthcheckUrl: '/heath-check'}
 
   // Do not touch the following lines
 
@@ -22,4 +25,5 @@ module.exports = async function (fastify, opts) {
     dir: path.join(__dirname, 'routes'),
     options: Object.assign({}, opts)
   })
+
 }
