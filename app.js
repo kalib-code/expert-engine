@@ -7,7 +7,7 @@ const AutoLoad = require('@fastify/autoload')
 module.exports = async function (fastify, opts) {
   // Place here your custom code!
 
-  fastify.register(require('fastify-healthcheck')),{ healthcheckUrl: '/heath-check'}
+  fastify.register(require('fastify-healthcheck'),{ healthcheckUrl: '/health-check'})
 
   // Do not touch the following lines
 
